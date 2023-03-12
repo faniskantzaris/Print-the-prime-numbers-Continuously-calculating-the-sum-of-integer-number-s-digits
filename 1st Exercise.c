@@ -1,31 +1,28 @@
-// ¡Õ‘∆¡—«” »≈œ÷¡Õ«”
-//1117-2020-00062
 #include<stdio.h>
 int main() {
-    int number; //o atithmos pou ekxoreite
-    int i = 3; //arxikopoihsh tou i me 3
-    int meter; //metritis
-    int flag; //metabliti
-    printf("Dwse arithmo :  ");
+    int number; //Input number
+    int i = 3; //Initializing i to 3
+    int meter; //Counter that counts the prime number's
+    int flag; //Counter that checks if the number is prime or not
+    printf("Give number :  ");
     scanf_s("%d", &number);
-    if (number <= 0) { //elexos gia lathos ekxorisi
-        printf("Lathos arithmos! Prospathise pali:  ");
+    if (number <= 0) { //Checking for error
+        printf("Wrong number. Please try again:  ");
         scanf_s("%d", &number);
     }
     if (number >= 1) {
-        printf("\nOi prwtoi %d arithmoi einai :  ", number);
-        printf("2 "); //to 2 ektiponetai panta
+        printf("\nThe prime numbers are %d :  ", number);
+        printf("2 "); //Always printing number 2
     }
-    // to 1 tsekarete se ka8e epanalipsi jekinontas apo to 3
     for (meter = 2; meter <= number; i++) {
-        //tsekaroume an to flag einai prwtos h oxi
+        //Checking if counter flag is prime number
         for (flag = 2; flag < i; flag++) {
             if (i % flag == 0)
                 break;
         }
-        if (flag == i) { //o flag einai prwtos
+        if (flag == i) { //Checking if counter flag is prime
             printf("%d ", i);
-            meter++; //afjisi tou metriti twvn prwton    
+            meter++; //Increasing counter
         }
     }
     return 0;
