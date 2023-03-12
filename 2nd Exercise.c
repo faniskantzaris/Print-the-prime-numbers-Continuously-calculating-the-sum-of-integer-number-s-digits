@@ -1,21 +1,19 @@
-//KANTZARIS FANIS
-//1117-2020-00062
 #include<stdio.h> 
 int main() {
-    int number;
-    int sum = 0;
-    int last_number;
-    printf("Dwse enan arithmo:  ");
+    int number; //The number that the user gives
+    int sum = 0; //Counter
+    int last_number; 
+    printf("Give number:  ");
     scanf_s("%ld", &number);
     while (number / 10 != 0) {
         sum = 0;
         while (number != 0) {
-            last_number = number % 10;  // pairno ton teleutaio arithmo
-            sum += last_number;     // prostheto ton teleutaio arithmo sto sum
-            number = number / 10;  // afero ton teleutaio arithmo
+            last_number = number % 10;  //Keep the last digit
+            sum += last_number;     //Adding the last digit to the counter
+            number = number / 10;  //Removing the last digit
         }
-        number = sum; // ekxoro ston arithmo to sum
+        number = sum; //Inserting the number to the sum
     }
-    printf("\nTo athroisma einai: %d", sum);
+    printf("\nThe sum is: %d", sum);
     return 0;
 }
